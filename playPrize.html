@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<title id="title">发心大转盘，抽奖送豪礼</title>
+	<link rel="stylesheet" href="./commoncss/common.css">
+	<link rel="stylesheet" href="./commoncss/reset.css">
+	<link rel="stylesheet" href="./luckyDrawcss/playPrize.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<p class="activeOver" id="timer">距离活动结束还有<span id="times_d"></span>天<span id="times_h"></span>时<span id="times_m"></span>分<span id="times_s"></span>秒</p>
+		<img src="http://wimg.keepyoga.com/images/prize-bj.jpg" alt="" class="bj">
+		<div class="prize">
+			<img src="http://wimg.keepyoga.com/images/dazhuanpan-prize_03.png" alt="" id="rotateImg">
+			<img src="http://wimg.keepyoga.com/images/prize-gif-1.gif" alt="" class="gif" id="gif">
+		</div>
+		<button class="start" type="button" id="start">
+			<img src="http://wimg.keepyoga.com/images/prize-btn-start.png" alt="">
+		</button>
+		<button type="button" class="gz" id="gz">
+			<img src="http://wimg.keepyoga.com/images/pirzeguize_03.jpg" alt="">
+		</button>
+		<div class="marqueen" id="marqueen">
+			<div id="leftBox">
+				<ul id="left1">
+					<li>发心大转盘，抽奖送豪礼</li>
+					<li>发心大转盘，抽奖送豪礼</li>
+					<li>发心大转盘，抽奖送豪礼</li>
+					<li>发心大转盘，抽奖送豪礼</li>
+					<li>发心大转盘，抽奖送豪礼</li>
+				</ul>
+
+				<ul id="left2"></ul>
+			</div>
+		</div>
+		<div class="marqueenTop" id="marqueenTop">
+			<div id="topBox">
+				<ul id="top1">
+					<div>
+						<li>
+							111111111
+						</li>
+						<li>
+							111111111
+						</li>
+					</div>
+					<div>
+						<li>
+							222222222
+						</li>
+						<li>
+							222222222
+						</li>
+					</div>
+					<div>
+						<li>
+							3333333333
+						</li>
+						<li>
+							3333333333
+						</li>
+					</div>
+
+					<div>
+						<li>
+							4444444444444
+						</li>
+						<li>
+							4444444444444
+						</li>
+					</div>
+					<div>
+						<li>
+							5555555555
+						</li>
+						<li>
+							5555555555
+						</li>
+					</div>
+					<div>
+						<li>
+							6666666666
+						</li>
+						<li>
+							6666666666
+						</li>
+					</div>
+					<div>
+						<li>
+							7777777777
+						</li>
+						<li>
+							7777777777
+						</li>
+					</div>
+				</ul>
+				<ul id="top2"></ul>
+			</div>
+		</div>
+
+		<div class="masking" id="mask"></div>
+		<div class="guize">
+			<img src="http://wimg.keepyoga.com/images/pirze-gz_03.png" alt="" id="guize">
+		</div>
+		<div class="over">
+			<img src="http://wimg.keepyoga.com/images/prizeover_02.png" alt="">
+		</div>
+		<div class="saved">
+			<img src="http://wimg.keepyoga.com/images/prizesave_02.png" alt="">
+		</div>
+		<div class="getnum" id="getnum">
+			<h1 id="content"></h1>
+			<img src="http://wimg.keepyoga.com/images/prizeNum_02.png" alt="">
+		</div>
+</body>
+<script src="./commonjs/setfontsize.js"></script>
+<script src="./commonjs/zepto.js"></script>
+
+<script>
+	$("#gz").on("tap", function () {
+		mask("block");
+		$("#guize").show();
+		$("#mask").on("tap", function () {
+			mask("none");
+			$("#guize").hide();
+		})
+	})
+
+	function mask(istrue) {
+		$("#mask").css("display", istrue);
+	}
+
+	$("#start").on("tap", function () {
+		var num = 1;
+		imgRotate(num - 1);
+		showPrize(num);
+		$("#gif").css("display", "block");
+	})
+
+	function imgRotate(num) {
+		var imgdeg = 360 * 15 + 360 / 6 * num;
+		$("#rotateImg").css({
+			'transform': 'rotate(' + imgdeg + 'deg)',
+			'-moz-transform': 'rotate(' + imgdeg + 'deg)',
+			'-o-transform': 'rotate(' + imgdeg + 'deg)'
+		}).addClass("animation");
+
+	}
+
+	function showPrize(num) {
+		switch (num) {
+		case 1:
+			showH1("一等奖");
+			break;
+		case 2:
+			showH1("二等奖");
+			break;
+		case 3:
+			showH1("三等奖");
+			break;
+		case 4:
+			showH1("四等奖");
+			break;
+		case 5:
+			showH1("五等奖");
+			break;
+		case 6:
+			showH1("六等奖");
+			break;
+		default:
+			break;
+		}
+	}
+
+	function showH1(content) {
+		setTimeout(function () {
+			mask("block");
+			$("#getnum *").show();
+			$("#content").html(content);
+		}, 7800);
+
+	}
+	/*zuo'gun'dong*/
+
+	var left1HTml = $("#left1").html();
+	$("#left2").html(left1HTml);
+	var sWidth = $("#left1").width();
+	var i = 1;
+	setInterval(function () {
+		i++;
+		$("#leftBox").css({
+			'transform': 'translateX(' + (-i) + 'px)',
+			'-moz-transform': 'translateX(' + (-i) + 'px)',
+			'-o-transform': 'translateX(' + (-i) + 'px)'
+		});
+		if (i == sWidth) {
+			i = 0;
+			$("#leftBox").css({
+				'transform': 'translateX(' + 0 + 'px)',
+				'-moz-transform': 'translateX(' + 0 + 'px)',
+				'-o-transform': 'translateX(' + 0 + 'px)'
+			});
+		}
+	}, 50);
+
+	var top1Html = $("#top1").html();
+	$("#top2").html(top1Html);
+	var sHeight = $("#top1").height();
+	console.log(sHeight)
+	var j = 1;
+	setInterval(function () {
+		j++;
+		$("#topBox").css({
+			'transform': 'translateY(' + (-j) + 'px)',
+			'-moz-transform': 'translateY(' + (-j) + 'px)',
+			'-o-transform': 'translateY(' + (-j) + 'px)'
+		});
+		if (j == sHeight) {
+
+			j = 0;
+			$("#topBox").css({
+				'transform': 'translateY(' + 0 + 'px)',
+				'-moz-transform': 'translateY(' + 0 + 'px)',
+				'-o-transform': 'translateY(' + 0 + 'px)'
+			});
+		}
+	}, 50);
+
+	/*倒计时*/
+	var time_now_server, time_now_client, time_end, time_server_client, timerID;
+
+	time_end = new Date("2016/11/19 11:10:1"); //结束的时间  
+	time_end = time_end.getTime();
+
+	time_now_server = new Date("2016/11/4 10:10:1"); //开始的时间  
+	time_now_server = time_now_server.getTime();
+
+	time_now_client = new Date();
+	time_now_client = time_now_client.getTime();
+
+	time_server_client = time_now_server - time_now_client;
+
+	setTimeout("show_time()", 1000);
+
+	function show_time() {
+		var timer = document.getElementById("timer");
+		if (!timer) {
+			return;
+		}
+		timer.innerHTML = time_server_client;
+
+		var time_now, time_distance, str_time;
+		var int_day, int_hour, int_minute, int_second;
+		var time_now = new Date();
+		time_now = time_now.getTime() + time_server_client;
+		time_distance = time_end - time_now;
+		if (time_distance > 0) {
+			int_day = Math.floor(time_distance / 86400000)
+			time_distance -= int_day * 86400000;
+			int_hour = Math.floor(time_distance / 3600000)
+			time_distance -= int_hour * 3600000;
+			int_minute = Math.floor(time_distance / 60000)
+			time_distance -= int_minute * 60000;
+			int_second = Math.floor(time_distance / 1000)
+
+			if (int_hour < 10)
+				int_hour = "0" + int_hour;
+			if (int_minute < 10)
+				int_minute = "0" + int_minute;
+			if (int_second < 10)
+				int_second = "0" + int_second;
+			str_time = "距离活动结束还有<span>" + int_day + "</span>天<span>" + int_hour + "</span>小时<span>" + int_minute + "</span>分钟<span>" + int_second + "</span>秒";
+			timer.innerHTML = str_time;
+			setTimeout("show_time()", 1000);
+		} else {
+			timer.innerHTML = "活动已经结束";
+			clearTimeout(timerID)
+		}
+	}
+</script>
+
+</html>

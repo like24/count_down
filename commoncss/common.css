@@ -1,0 +1,465 @@
+html,
+body,
+.wrapper {
+	width: 100%;
+	height: 100%;
+	background: #f4f4f4;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input {
+	-webkit-appearance: none;
+}
+
+button {
+	-moz-user-select: none;
+	-webkit-user-select: none
+}
+
+dl>dt>a>img {
+	display: inline-block;
+	border-radius: 50%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+
+.mainBox {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 2.35rem;
+}
+
+
+/* nav导航公共样式 */
+
+.nav {
+	width: 100%;
+}
+
+.nav ul {
+	height: 1.375rem;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+	border: 1px solid #1d92fb;
+	width: 9.5rem;
+	height: 1.5rem;
+	border-radius: 3px;
+	margin: .8875rem auto;
+}
+
+.nav ul li {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	height: 1.5rem;
+}
+
+.nav li a {
+	display: block;
+	color: #1d92fb;
+	width: 100%;
+	height: 1.5rem;
+	text-align: center;
+	line-height: 1.5rem;
+	font-size: 15px;
+}
+
+.nav li a.high {
+	background: #1d92fb;
+	color: white;
+}
+
+
+/* 底部公共样式 */
+
+.footer {
+	width: 100%;
+	height: 2.35rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: white;
+	overflow: hidden;
+	border-top: 1px solid #d2d2d2;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-box;
+}
+
+.footer a {
+	display: block;
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	text-align: center;
+	line-height: 2.35rem;
+	font-size: 15px;
+	color: #9c9c9c;
+}
+
+.footer a.footerhigh {
+	color: #1d92fb;
+}
+
+div.masking {
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: .5;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 4;
+}
+
+.audio {
+	width: 10.5rem;
+	height: 2rem;
+	border-radius: 20px;
+	background: #118eff;
+	border: none;
+	font-size: 13px;
+	color: white;
+}
+
+dl dd span {
+	color: #c6c6c6;
+	margin-left: .5rem;
+	font-size: 15px;
+	position: relative;
+	top: .05rem;
+}
+
+ul li>p {
+	margin: .85rem;
+	margin-bottom: 0;
+	font-size: 13px;
+	color: #c6c6c6;
+}
+
+ul li>p span:nth-child(2) {
+	float: right;
+	margin-right: -.2rem;
+}
+
+;
+
+/*上拉加载样式*/
+
+#pullUp {
+	font-weight: bold;
+	font-size: 14px;
+	color: #888;
+	text-align: center;
+	width: 100%;
+	height: 2.6rem;
+	line-height: 2.6rem;
+}
+
+
+/*弹框*/
+
+#share,
+#noshop,
+#shopping,
+#money {
+	width: 14.475rem;
+	height: 6.125rem;
+	background: white;
+	position: absolute;
+	left: 50%;
+	top: 8.325rem;
+	margin-left: -7.22375rem;
+	z-index: 999;
+	border-radius: 3px;
+	text-align: center;
+}
+
+#noshop {
+	height: 7.25rem;
+}
+
+#shopping {
+	height: 7.575rem;
+}
+
+#share p,
+#noshop p,
+#shopping p,
+#over p {
+	font-size: 15px;
+	color: #3f3f3f;
+	text-align: center;
+}
+
+#share p:nth-child(2) {
+	margin-top: 2.2rem;
+	margin-bottom: .2rem;
+}
+
+#share span.close,
+#noshop span.close,
+#teach span.close,
+#money span.close {
+	width: .85rem;
+	height: .85rem;
+	background: red;
+	background: url("../images/close.jpg") no-repeat;
+	background-size: cover;
+	float: right;
+	margin-top: .55rem;
+	margin-right: .55rem;
+}
+
+#money {
+	padding-bottom: .7rem;
+}
+
+#money .title1 {
+	font-size: 15px;
+	text-align: left;
+	padding-left: 1rem;
+	padding-top: 1rem;
+}
+
+#money .title2 {
+	font-size: 13px;
+	text-align: left;
+	padding: 1rem;
+	line-height: 1rem;
+}
+
+#noshop p {
+	margin-top: 1.65rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+#noshop button {
+	width: 4.95rem;
+	height: 1.675rem;
+	border-radius: 3px;
+	border: none;
+	outline: none;
+	color: white;
+	font-size: 13px;
+	background: #9c9c9c;
+}
+
+#noshop button.btnleft {
+	background: #1d92fb;
+	margin-right: 1.1rem;
+}
+
+#shopping div {
+	width: 2.775rem;
+	height: 2.775rem;
+	background-size: contain;
+	margin: 0 auto;
+	margin-top: 1rem;
+	margin-bottom: .75rem;
+}
+
+#shopping div+p {
+	margin-bottom: .2rem;
+}
+
+#shopping b {
+	color: #1d92fb;
+	font-weight: normal;
+}
+
+.successImg {
+	background: url("../images/success.png");
+}
+
+.errorImg {
+	background: url("../images/error.png");
+}
+
+#over {
+	width: 100%;
+	height: 10rem;
+	background: black;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: .8;
+	z-index: 99;
+}
+
+#over div {
+	width: 2.775rem;
+	height: 2.775rem;
+	background-size: contain;
+	margin: 0 auto;
+	margin-top: 2.25rem;
+	margin-bottom: .75rem;
+}
+
+#over p {
+	color: white;
+}
+
+#over p:nth-child(2) {
+	margin-bottom: .4rem;
+}
+
+#over span {
+	color: #1d92fb;
+}
+
+#teach {
+	width: 14.5rem;
+	height: 15.325rem;
+	border-radius: 5px;
+	background: white;
+	position: relative;
+	z-index: 999;
+	top: 6.7rem;
+	left: 50%;
+	margin-left: -7.25rem;
+}
+
+#teach .radiusBox {
+	width: 3.9rem;
+	height: 3.9rem;
+	border-radius: 50%;
+	background: white;
+	position: absolute;
+	left: 50%;
+	margin-left: -1.95rem;
+	top: -1.95rem;
+}
+
+#teach img {
+	width: 3.5rem;
+	height: 3.5rem;
+	position: absolute;
+	left: 50%;
+	margin-left: -1.75rem;
+	top: -1.75rem;
+	z-index: 9999;
+	border-radius: 50%;
+}
+
+#teach h1 {
+	padding-top: 2.3rem;
+	text-align: center;
+	font-size: 17px;
+	color: #3f3f3f;
+}
+
+#teach p {
+	color: #9c9c9c;
+	font-size: 13px;
+	padding: 0 1.1rem;
+}
+
+#teach p.title1 {
+	text-align: center;
+	margin-top: .4rem;
+	margin-bottom: .8rem;
+}
+
+#teach p.title2 {
+	line-height: .9rem;
+	height: 6rem;
+	overflow-y: scroll;
+}
+
+#teach button {
+	width: 4.95rem;
+	height: 1.675rem;
+	border-radius: 3px;
+	border: none;
+	outline: none;
+	color: white;
+	font-size: 13px;
+	background: #1d93fa;
+	position: absolute;
+	bottom: .825rem;
+	left: 50%;
+	margin-left: -2.5rem;
+}
+
+#two_dimension_code {
+	position: relative;
+	left: 50%;
+	top: 2.5rem;
+	width: 10rem;
+	height: 20.75rem;
+	border-radius: 5px;
+	background: white;
+	z-index: 999;
+	margin-left: -7.1rem;
+	padding: 0 2.1rem;
+}
+
+#two_dimension_code img.two_dimension {
+	width: 3.175rem;
+	height: 3.175rem;
+	position: absolute;
+	top: 1.75rem;
+}
+
+#two_dimension_code img.two_dimension_img {
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
+	bottom: 3.625rem;
+}
+
+#two_dimension_code .title2 {
+	color: #9c9c9c;
+	font-size: 13px;
+	position: absolute;
+	bottom: 1.75rem;
+	left: 1.2rem;
+}
+
+#two_dimension_code h1 {
+	position: absolute;
+	top: 1.85rem;
+	left: 5.95rem;
+	font-size: 15px;
+	color: #3f3f3f;
+	font-weight: normal;
+}
+
+#two_dimension_code .title1 {
+	font-size: 13px;
+	color: #9c9c9c;
+	position: absolute;
+	left: 5.95rem;
+	top: 3.25rem;
+	padding-right: 1.8rem;
+}
+
+input,
+textarea {
+	-webkit-user-select: auto;
+}
+
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.study {
+	background: #ff9b00;
+}

@@ -1,0 +1,117 @@
+.mainBox video{
+	width:100%;
+	height:10rem;
+	display:block;
+	background-image: url("../images/video.jpg") ;
+	background-size: 100%;
+}
+.skill{
+	width: 100%;
+	height: 3.7rem;
+	border-bottom: 1px solid #d6d6d6;
+	background: #fff;
+}
+.skill p{
+	width: 90%;
+	margin:auto ;
+	padding-top: 0.9rem;
+	font-size: 15px;
+	color: #3f3f3f;
+}
+.skill p span{
+	font-size: 15px;
+	float: right;
+	color: #1d92fc;
+}
+.skill b{
+	display: inline-block;
+	color: #fff;
+	background: #c0c0c0;
+	margin-top: 0.5rem;
+	padding:0 0.5rem;
+	padding-bottom: .1rem;
+	margin-left: 0.3rem;
+	border-radius: 3px;
+	font-weight: normal;
+}
+.skill b:nth-of-type(1){
+	margin-left: 5%;
+}
+.buy{
+	width: 100%;
+	height: 2.45rem;
+	background: #fff;
+	margin-bottom: 0.5rem;
+}
+
+.buy span{
+	margin-top: 0.6rem;
+	display: inline-block;
+	width: 3rem;
+	height: 1.175rem;
+	text-indent: 1.3rem;
+	line-height: 1.1rem;
+	font-size: 13px;
+}
+.buy span:nth-of-type(2){
+	
+	background: url(../images/collect.jpg) no-repeat 14%;
+	background-size: 24%;
+	color: #9c9c9c;
+	border: 1px solid #c0c0c0;
+	border-radius: 5px;
+}
+.buy span:nth-of-type(1){
+	margin-left: .825rem;
+	background: url(../images/share.jpg) no-repeat 12%;
+	background-size: 25%;
+	color: #9c9c9c;
+	border: 1px solid #c0c0c0;
+	border-radius: 5px;
+	margin-right: .4rem;
+}
+.buy button{
+	width: 4.95rem;
+	height: 1.7rem;
+	margin-left: 4.4rem;
+	color: #fff;
+	background: #1d92fb;
+	border: 0;
+	border-radius: 5px;
+	font-size: 13px;
+}
+.content{
+	width: 100%;
+	background: white;
+}
+.content nav{
+	width: 100%;
+	height: 2.35rem;
+	border-bottom: 1px solid #d6d6d6;
+	background: #fff;
+}
+.content nav ul{
+	margin-left: 5%;
+	height: 2.2rem;
+	font-size: 14px;
+}
+.content nav ul li{
+	width: 4.4rem;
+	float: left;
+	height: 100%;
+	text-align: center;
+	line-height: 2.2rem;
+}
+.content nav ul li a{
+	color:#3f3f3f;
+}
+.content nav ul li.high{
+	color: #1d92fb;
+	border-bottom: 3px solid #1d92fb;
+}
+.content nav ul li.high a{
+	color: #1d92fb;
+}
+dl dt img{
+	border-radius:50%;
+}

@@ -1,0 +1,146 @@
+@w:100%;
+.iscrollBox{
+    width:@w;
+   margin-bottom: 2.35rem;
+}
+nav{
+    width:@w;
+     padding:.875rem 0;
+    position: relative;
+    ul{
+        height: 1.4rem;
+        width:9.5rem;
+        display: -webkit-box;
+        border:1px solid #1d93fa;
+        margin: 0 auto;
+       
+        li{
+            width:50%;
+            color: #1d93fa;
+            text-align: center;
+            line-height: 1.4rem;
+            font-size: 15px;
+            &.high{
+                background: #1d93fa;
+                color:white;
+            }
+        }
+    }
+    a{
+        position: absolute;
+        right: 0;
+        background: url("../images/search.jpg") no-repeat;
+        background-size: contain;
+        width:.925rem;
+        height: .925rem;
+        color: transparent;
+        top:50%;
+        margin-top: -.463rem;
+        right: .875rem;
+    }
+}
+/*活动开始*/
+.campaign{
+    width:@w;
+    margin-bottom: 2.35rem;
+
+    div{
+        margin-bottom: .6rem;
+        background: white;
+        position: relative;
+        padding-bottom: .75rem;
+        h1{
+            font-size: 15px;
+            color:#3f3f3f;
+            padding: 0 .875rem;
+            padding-top: .875rem;
+            margin-left: -.25rem;
+            margin-bottom: .3rem;
+        }
+        p{
+            font-size: 13px;
+            color: #3f3f3f;
+            padding: 0 .875rem;
+            margin-bottom: .2rem;
+        }
+        ol{
+            width:0;
+            height:0;
+            border-width:2rem 2rem 2rem 2rem;
+            border-style:solid;
+            border-color: #1d93fa #1d93fa transparent transparent;
+            position: absolute;
+            right: 0;
+            top:0;
+            span{
+                font-size: 13px;
+                color:white;
+                position: absolute;
+                width:4.12rem;
+                transform:rotate(45deg);
+                -ms-transform:rotate(45deg); 	/* IE 9 */
+                -moz-transform:rotate(45deg); 	/* Firefox */
+                -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+                -o-transform:rotate(45deg);
+                left:-.8rem;
+             
+            }
+            &.bjcolor{
+                border-color: #9c9d9f #9c9d9f transparent transparent;
+            }
+        }
+    }
+    
+}
+
+.tutor{
+    
+  
+    background: white;
+
+    ul{
+        padding-top: .45rem;
+        padding-bottom: 100%;
+    }
+    li{
+        display: -webkit-box;
+        margin-bottom: 1rem;
+       -webkit- box-pack:justify;
+        padding:0 .45rem;
+        ol{
+            width:3.625rem;
+            height:3.625rem;
+            position: relative;
+           
+            img{
+                display: block;
+                width: 3.625rem;
+                height:3.625rem;
+                border-radius: 50%;
+            }
+            div{
+                width: 3.625rem;
+                height:3.625rem;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 3;
+                background: black;
+                opacity: .2;
+                left: 0;
+                top:0;
+            }
+            span{
+                color:white;
+                font-size: 13px;
+                position: absolute;
+                z-index: 5;
+                left:0;
+                bottom:.5rem;
+                text-shadow: 0 0 5px black;
+                font-size: 16px;
+                text-align: center;
+                width: 3.625rem;
+            }
+        }
+    }
+}
